@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="all,index,follow">
+    <meta name="description" content="唐瑞商务知识产权服务：家具商标注册、外观专利、品牌维权、企业知产布局一站式解决方案">
+    <meta name="keywords" content="家具商标注册,家具外观专利,知识产权服务,商标专利,唐瑞商务">
+    <title>知识产权全方位解决方案 | 唐瑞商务服务有限公司</title>
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", Roboto, "Microsoft Yahei", sans-serif;
+        }
+        :root {
+            --main: #0A2463;
+            --second: #3E92CC;
+            --gold: #1A936F;
+            --gray: #222222;
+            --light: #F7F9FC;
+            --white: #ffffff;
+            --wood-shadow: 0 2px 10px rgba(10, 36, 99, 0.08);
+            --furniture-bg: #FFF9E8;
+            --furniture-orange: #FF8C00;
+            --furniture-border: #FFB74D;
+        }
+        body {
+            color: var(--gray);
+            line-height: 1.7;
+            background: var(--light);
+        }
+        .container {
+            width: 92%;
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        /* LOGO 放大两倍 */
+        .logo img {
+            height: 100px !important;
+        }
+        .logo-text {
+            display: none;
+            margin-left: 12px;
+            color: var(--main);
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        header {
+            background: var(--white);
+            box-shadow: var(--wood-shadow);
+            position: sticky;
+            top: 0;
+            z-index: 9999;
+            width: 100%;
+            padding: 8px 0;
+        }
+        .head-wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* 导航字体加大加粗 */
+        .nav {
+            display: flex;
+            list-style: none;
+        }
+        .nav li {
+            margin-left: 26px;
+        }
+        .nav a {
+            text-decoration: none;
+            color: var(--gray);
+            font-weight: 800;
+            font-size: 16px;
+            transition: 0.3s;
+            position: relative;
+        }
+        .nav a:hover {
+            color: var(--main);
+        }
+        .nav a::after {
+            content: "";
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: var(--second);
+            transition: 0.3s;
+        }
+        .nav a:hover::after {
+            width: 100%;
+        }
+
+        .lang-switch {
+            padding: 7px 16px;
+            background: var(--main);
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+        .lang-switch:hover {
+            background: var(--second);
+        }
+
+        /* Banner 科技海报（直接导入在线图） */
+        .banner {
+            background: url("https://picsum.photos/id/1076/1920/600") center center / cover no-repeat;
+            color: #fff;
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+        }
+        .banner::after {
+            content: "";
+            position: absolute;
+            left: 0; top: 0; width: 100%; height: 100%;
+            background: rgba(10, 36, 99, 0.7);
+            z-index: 1;
+        }
+        .banner .container {
+            position: relative; z-index: 2;
+        }
+        .banner h1 {
+            font-size: 40px;
+            margin-bottom: 18px;
+            line-height: 1.3;
+            font-weight: 700;
+        }
+        .banner p {
+            font-size: 18px;
+            margin-bottom: 32px;
+            opacity: 0.95;
+        }
+        .banner-btn {
+            padding: 13px 36px;
+            background: #fff;
+            color: var(--main);
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+        .banner-btn:hover {
+            background: var(--second);
+            color: #fff;
+        }
+
+        /* 间距缩小 */
+        .section {
+            padding: 50px 0;
+        }
+        .sec-title {
+            text-align: center;
+            font-size: 28px;
+            color: var(--main);
+            margin-bottom: 12px;
+            position: relative;
+            font-weight: 700;
+        }
+        .sec-desc {
+            text-align: center;
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 35px;
+            line-height: 1.6;
+        }
+        .sec-title::after {
+            content: "";
+            width: 60px;
+            height: 3px;
+            background: var(--second);
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -12px;
+            border-radius: 2px;
+        }
+
+        .about-wrap {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 35px;
+            align-items: center;
+        }
+        .about-img {
+            width: 100%;
+            border-radius: 8px;
+            height: 260px;
+            background: linear-gradient(135deg, #E2E8F0, #CBD5E1);
+            box-shadow: var(--wood-shadow);
+        }
+
+        /* 企业优势 */
+        .advantage-section {
+            background: #fff;
+            padding: 45px 0;
+        }
+        .advantage-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        .advantage-item {
+            text-align: center;
+            padding: 25px 15px;
+            background: var(--light);
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+        .advantage-item:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--wood-shadow);
+        }
+        .advantage-item i {
+            font-size: 36px;
+            color: var(--second);
+            margin-bottom: 12px;
+        }
+        .advantage-item h4 {
+            font-size: 17px;
+            color: var(--main);
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+        .advantage-item p {
+            font-size: 14px;
+            color: #555;
+        }
+
+        /* 服务 */
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+        .service-card {
+            background: var(--white);
+            padding: 30px 20px;
+            border-radius: 8px;
+            text-align: center;
+            transition: 0.3s ease;
+            box-shadow: var(--wood-shadow);
+        }
+        .service-card:hover {
+            transform: translateY(-4px);
+        }
+        .r-mark {
+            font-size: 28px !important;
+            font-weight: 900 !important;
+            color: var(--main);
+        }
+        .service-card i {
+            font-size: 32px;
+            color: var(--second);
+            margin-bottom: 15px;
+        }
+        .service-card h3 {
+            color: var(--main);
+            margin-bottom: 12px;
+            font-size: 18px;
+            font-weight: 700;
+        }
+        .service-card p {
+            font-size: 14px;
+            color: #444;
+        }
+
+        /* 案例 */
+        .case-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .case-item {
+            background: var(--white);
+            padding: 22px;
+            border-radius: 8px;
+            text-align: center;
+            transition: 0.3s;
+            box-shadow: var(--wood-shadow);
+        }
+        .case-item:hover {
+            transform: translateY(-4px);
+        }
+        .case-img {
+            width: 100%;
+            height: 160px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, #E2E8F0, #CBD5E1);
+        }
+        .case-item h3 {
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--main);
+            margin-bottom: 8px;
+        }
+
+        /* 联系 */
+        .contact-box {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 35px;
+            border-radius: 8px;
+            box-shadow: var(--wood-shadow);
+        }
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin: 14px 0;
+            font-size: 15px;
+        }
+        .contact-item i {
+            width: 34px;
+            height: 34px;
+            line-height: 34px;
+            text-align: center;
+            background: var(--main);
+            color: #fff;
+            border-radius: 50%;
+            margin-right: 12px;
+            font-size: 14px;
+        }
+        .map-wrap {
+            margin-top: 25px;
+            border-radius: 8px;
+            overflow: hidden;
+            height: 300px;
+            width: 100%;
+            box-shadow: var(--wood-shadow);
+        }
+
+        /* 家具定制 */
+        .furniture-guide {
+            background: var(--furniture-bg);
+            border-left: 4px solid var(--furniture-border);
+            border-radius: 8px;
+            padding: 35px 0;
+            margin: 0 0 40px;
+            text-align: center;
+            box-shadow: var(--wood-shadow);
+        }
+        .furniture-guide h3 {
+            color: var(--furniture-orange);
+            font-size: 22px;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+        .furniture-guide p {
+            font-size: 15px;
+            color: var(--gray);
+            margin-bottom: 22px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .furniture-guide-btn {
+            padding: 12px 38px;
+            background: var(--furniture-orange);
+            color: #fff;
+            border: none;
+            border-radius: 50px;
+            font-size: 15px;
+            font-weight: 700;
+            transition: 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .furniture-guide-btn:hover {
+            background: #E67E00;
+            transform: translateY(-2px);
+        }
+
+        /* 页脚 */
+        footer {
+            background: var(--main);
+            color: #fff;
+            padding: 45px 0 20px;
+        }
+        .footer-wrap {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-bottom: 25px;
+        }
+        .footer-col h4 {
+            font-size: 18px;
+            margin-bottom: 18px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #ffffff33;
+            font-weight: 700;
+        }
+        .footer-col ul {
+            list-style: none;
+        }
+        .footer-col ul li {
+            margin: 6px 0;
+        }
+        .footer-col ul li a {
+            color: #eee;
+            text-decoration: none;
+            transition: 0.3s;
+            font-size: 15px;
+        }
+        .footer-col ul li a:hover {
+            color: var(--second);
+            padding-left: 4px;
+        }
+        .footer-col p {
+            color: #eee;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #ffffff22;
+            font-size: 14px;
+        }
+
+        .en {display: none;}
+        .zh {display: block;}
+
+        @media (max-width:768px){
+            .nav {display: none;}
+            .logo img {height: 70px !important;}
+            .banner h1 {font-size: 28px;}
+            .service-grid,.case-grid,.advantage-grid {grid-template-columns: 1fr;}
+            .about-wrap {grid-template-columns: 1fr;}
+            .banner {padding: 70px 0;}
+            .footer-wrap {grid-template-columns: 1fr;}
+            .logo-text {display: block;}
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container head-wrap">
+        <div class="logo">
+            <img src="logo.png" alt="唐瑞商务LOGO">
+            <span class="logo-text zh">知识产权服务</span>
+            <span class="logo-text en">IP Service</span>
+        </div>
+
+        <!-- 导航顺序已按要求调整 -->
+        <ul class="nav">
+            <li><a href="#home" class="zh">首页</a><a href="#home" class="en">Home</a></li>
+            <li><a href="#about" class="zh">关于唐瑞知产</a><a href="#about" class="en">About Us</a></li>
+            <li><a href="#service" class="zh">知识产权服务</a><a href="#service" class="en">IP Services</a></li>
+            <li><a href="#case" class="zh">服务案例</a><a href="#case" class="en">Cases</a></li>
+            <li><a href="#contact" class="zh">联系我们</a><a href="#contact" class="en">Contact</a></li>
+            <li><a href="https://www.tanrui.net" target="_blank" class="zh">唐瑞商务</a><a href="https://www.tanrui.net" target="_blank" class="en">Main Site</a></li>
+        </ul>
+
+        <button class="lang-switch" id="langBtn">English</button>
+    </div>
+</header>
+
+<!-- 科技感 Banner 海报 -->
+<section class="banner" id="home">
+    <div class="container">
+        <h1 class="zh">知识产权全方位解决方案<br>商标注册 | 外观专利 | 品牌维权</h1>
+        <h1 class="en">IP Full Solutions<br>Trademark Registration | Design Patent | Brand Protection</h1>
+        <p class="zh">唐瑞商务 专注知识产权服务，覆盖商标、专利、版权登记、涉外服务等全链条解决方案</p>
+        <p class="en">Tangrui Business focuses on IP services, covering trademark, patent, copyright, cross-border services</p>
+        <a href="#contact" class="banner-btn zh">立即咨询</a>
+        <a href="#contact" class="banner-btn en">Consult Now</a>
+    </div>
+</section>
+
+<!-- 关于唐瑞知产 -->
+<section class="section" id="about">
+    <div class="container">
+        <h2 class="sec-title zh">关于唐瑞知产</h2>
+        <h2 class="sec-title en">About Us</h2>
+        <div class="about-wrap">
+            <div class="about-img"></div>
+            <div>
+                <p class="zh">唐瑞商务服务有限公司，深耕知识产权服务10+年，专注商标注册、专利申请、复审答辩、涉外服务等核心业务，累计服务企业1000+家。<br>打造「商标+专利+版权」一体化保护方案，为企业品牌出海、本土保护提供专业支撑。</p>
+                <p class="en">Tangrui Business Service Co., Ltd. has focused on IP services for over 10 years, serving 1000+ enterprises.</p>
+                <p class="zh" style="margin-top:10px;font-weight:bold;">企业理念：专业知识产权服务 · 诚信守护品牌价值</p>
+                <p class="en" style="margin-top:10px;font-weight:bold;">Professional IP Service · Protect Brand Value</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 企业优势 -->
+<section class="advantage-section">
+    <div class="container">
+        <h2 class="sec-title zh">企业优势</h2>
+        <h2 class="sec-title en">Our Advantages</h2>
+        <div class="advantage-grid">
+            <div class="advantage-item">
+                <i class="fas fa-certificate"></i>
+                <h4 class="zh">10年行业经验</h4><h4 class="en">10+ Years</h4>
+                <p class="zh">专注知识产权，专业更放心</p><p class="en">Professional & Reliable</p>
+            </div>
+            <div class="advantage-item">
+                <i class="fas fa-shield-alt"></i>
+                <h4 class="zh">高通过率保障</h4><h4 class="en">High Success Rate</h4>
+                <p class="zh">商标专利通过率行业领先</p><p class="en">Leading Success Rate</p>
+            </div>
+            <div class="advantage-item">
+                <i class="fas fa-user-tie"></i>
+                <h4 class="zh">一对一专属服务</h4><h4 class="en">One-on-One Service</h4>
+                <p class="zh">全程顾问跟进，高效省心</p><p class="en">Efficient & Worry-free</p>
+            </div>
+            <div class="advantage-item">
+                <i class="fas fa-globe"></i>
+                <h4 class="zh">海内外全案服务</h4><h4 class="en">Global Services</h4>
+                <p class="zh">支持国内外商标专利布局</p><p class="en">Global IP Layout</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 知识产权服务 + 广告语 -->
+<section class="section" id="service">
+    <div class="container">
+        <h2 class="sec-title zh">知识产权服务</h2>
+        <h2 class="sec-title en">IP Services</h2>
+        <p class="sec-desc zh">全方位知识产权保护方案，为企业创新发展保驾护航</p>
+        <p class="sec-desc en">Comprehensive IP protection solutions to escort the innovative development of enterprises</p>
+        <div class="service-grid">
+            <div class="service-card"><div class="r-mark">®</div><h3 class="zh">商标注册</h3><p class="zh">商标国内/国际注册、检索、布局</p></div>
+            <div class="service-card"><i class="fas fa-award"></i><h3 class="zh">外观专利</h3><p class="zh">专利申请、维权、保护原创设计</p></div>
+            <div class="service-card"><i class="fas fa-shield-alt"></i><h3 class="zh">商标复审与答辩</h3><p class="zh">驳回复审、异议答辩、授权难题</p></div>
+            <div class="service-card"><i class="fas fa-exchange-alt"></i><h3 class="zh">商标变更续展</h3><p class="zh">变更、续展、转让、许可备案</p></div>
+            <div class="service-card"><i class="fas fa-globe"></i><h3 class="zh">涉外知识产权服务</h3><p class="zh">全球布局、跨境品牌保护</p></div>
+            <div class="service-card"><i class="fas fa-project-diagram"></i><h3 class="zh">企业IP整体方案</h3><p class="zh">商标+专利+版权全布局</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- 服务案例 + 广告语 -->
+<section class="section" id="case">
+    <div class="container">
+        <h2 class="sec-title zh">服务案例</h2>
+        <h2 class="sec-title en">Cases</h2>
+        <p class="sec-desc zh">知识产权服务案例，见证我们的专业实力</p>
+        <p class="sec-desc en">Intellectual property service cases, witness our professional strength</p>
+        <div class="case-grid">
+            <div class="case-item"><div class="case-img"></div><h3 class="zh">商标注册成功案例</h3></div>
+            <div class="case-item"><div class="case-img"></div><h3 class="zh">专利维权胜诉</h3></div>
+            <div class="case-item"><div class="case-img"></div><h3 class="zh">企业IP整体布局</h3></div>
+        </div>
+    </div>
+</section>
+
+<!-- 联系我们 + 广告语 -->
+<section class="section" id="contact">
+    <div class="container">
+        <h2 class="sec-title zh">联系我们</h2>
+        <h2 class="sec-title en">Contact Us</h2>
+        <p class="sec-desc zh">无论您需要知识产权代理服务还是后期维护，我们都竭诚为您服务</p>
+        <p class="sec-desc en">Whether you need IP agency or post-maintenance, we serve you wholeheartedly</p>
+        <div class="contact-box">
+            <div class="contact-item zh"><i class="fas fa-building"></i><span><strong>公司：</strong>唐瑞商务服务有限公司（知识产权事业部）</span></div>
+            <div class="contact-item zh"><i class="fas fa-phone"></i><span><strong>电话：</strong>13794302166（微信同号）</span></div>
+            <div class="contact-item zh"><i class="fas fa-envelope"></i><span><strong>邮箱：</strong>info@tanrui.net</span></div>
+            <div class="contact-item zh"><i class="fas fa-map-marker-alt"></i><span><strong>地址：</strong>广州市增城区派潭镇第二小学对面</span></div>
+            <div class="map-wrap"><iframe src="https://uri.amap.com/marker?position=113.875,23.483&name=唐瑞商务&zoom=15" width="100%" height="100%" style="border:0;" allowfullscreen=""></iframe></div>
+        </div>
+    </div>
+</section>
+
+<!-- 家具定制引导 -->
+<section class="furniture-guide">
+    <div class="container">
+        <h3 class="zh">企业注册商标后，需要办公/工程家具？</h3>
+        <p class="zh">唐瑞家具为您提供一站式工程家具定制服务，适配企业品牌形象</p>
+        <a href="https://你的家具定制子站域名.com" target="_blank" class="furniture-guide-btn zh">进入家具定制服务</a>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="footer-wrap">
+            <div class="footer-col">
+                <h4 class="zh">公司概括</h4>
+                <p class="zh">10+年知识产权服务经验，专注商标、专利、涉外服务等一站式解决方案。</p>
+            </div>
+            <div class="footer-col">
+                <h4 class="zh">快速链接</h4>
+                <ul>
+                    <li><a href="#home" class="zh">首页</a></li>
+                    <li><a href="#about" class="zh">关于唐瑞知产</a></li>
+                    <li><a href="#service" class="zh">知识产权服务</a></li>
+                    <li><a href="#case" class="zh">服务案例</a></li>
+                    <li><a href="#contact" class="zh">联系我们</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 class="zh">IP服务项目</h4>
+                <ul>
+                    <li><a href="#" class="zh">商标注册</a></li>
+                    <li><a href="#" class="zh">专利申请</a></li>
+                    <li><a href="#" class="zh">商标复审</a></li>
+                    <li><a href="#" class="zh">版权登记</a></li>
+                    <li><a href="#" class="zh">涉外知识产权</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p class="zh">© 唐瑞商务服务有限公司 版权所有 | 知识产权全方位解决方案</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    let isEn = false;
+    const langBtn = document.getElementById('langBtn');
+    langBtn.addEventListener('click',function(){
+        isEn = !isEn;
+        if(isEn){
+            document.querySelectorAll('.zh').forEach(el=>el.style.display='none');
+            document.querySelectorAll('.en').forEach(el=>el.style.display='block');
+            langBtn.innerText = '中文';
+        }else{
+            document.querySelectorAll('.zh').forEach(el=>el.style.display='block');
+            document.querySelectorAll('.en').forEach(el=>el.style.display='none');
+            langBtn.innerText = 'English';
+        }
+    });
+</script>
+</body>
+</html>
